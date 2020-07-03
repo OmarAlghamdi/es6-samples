@@ -1,4 +1,4 @@
-/* Using fetch api to get todos and users created them then merget the json responses.
+/* Using fetch api to get todos and users created them then merge the json responses.
 This example demonstrates promise handling, creation, chaining, & 'Promise.all*/
 
 

@@ -14,8 +14,8 @@ class Bird {
     relocate(newHome){
         this.#home = newHome;
     }
-    // should be overriden
-    makesound(){
+    // should be overridden
+    makeSound(){
         console.log('!!It depends on the bird type!!');
     }
     // most birds fly
@@ -23,18 +23,18 @@ class Bird {
         console.log("I'm flying & it feels awesome!");
     }
 
-    inroduce(){
+    introduce(){
         console.log(`Hi, my name is ${this.#name}. I live at ${this.#home}.`);
     }
 }
 
 class Duck extends Bird { 
     constructor(name, home){
-        // calling parents's constructor
+        // calling parents' constructor
         super(name, home);
     }
-    // overridding
-    makesound(){
+    // overriding
+    makeSound(){
         console.log('quack quack');
     }
 }
@@ -51,7 +51,7 @@ class Chicken extends Bird {
         this.#eggs += num;
     }
     // overriding
-    makesound(){
+    makeSound(){
         console.log('cluck cluck');
     }
     // overriding the default behavior
@@ -59,8 +59,8 @@ class Chicken extends Bird {
         console.log('I cannot fly');
     }
     // extending the the default behavior
-    inroduce(){
-        super.inroduce();
+    introduce(){
+        super.introduce();
         console.log(`I laid ${this.#eggs} eggs.`)
     }
 }
@@ -71,12 +71,12 @@ class Chicken extends Bird {
 let duck = new Duck('Donald Duck', 'Calisota');
 let chicken = new Chicken('Miss Prissy', "Leghorn's yard", 5);
 
-duck.inroduce();
-duck.makesound();
+duck.introduce();
+duck.makeSound();
 duck.fly();
 
 console.log('============');
 
-chicken.inroduce();
-chicken.makesound();
+chicken.introduce();
+chicken.makeSound();
 chicken.fly();
